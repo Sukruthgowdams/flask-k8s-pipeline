@@ -1,14 +1,9 @@
-from flask import Flask, jsonify
-
+from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return jsonify({"message": "Hello from Flask App in Kubernetes!"})
-
-@app.route('/health')
-def health():
-    return "OK", 200
+def hello():
+    return "Deployed Flask App via GitHub Actions & K8s!"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
