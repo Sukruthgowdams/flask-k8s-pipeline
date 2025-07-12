@@ -28,10 +28,9 @@ jobs:
         push: true
         tags: sukruthgowdams/flask-k8s:latest
 
-    # Deployment via kubectl
     - name: Set up Kubeconfig
       run: |
-        mkdir ~/.kube
+        mkdir -p ~/.kube
         echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
 
     - name: Deploy to Kubernetes
