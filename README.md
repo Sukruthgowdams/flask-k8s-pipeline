@@ -1,5 +1,4 @@
 
-````markdown
 # Flask Kubernetes CI/CD Pipeline
 
 This project demonstrates how to:
